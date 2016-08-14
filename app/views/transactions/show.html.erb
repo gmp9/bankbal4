@@ -1,0 +1,22 @@
+<p>
+  <strong>Date:</strong>
+  <%= @transaction.date %>
+</p>
+
+<p>
+  <strong>Bal:</strong>
+  <%= @transaction.calc(@transaction.bal,@transaction.dep,@transaction.wdl) %>
+</p>
+
+<p>
+  <strong>Dep:</strong>
+  <%= @transaction.dep %>
+</p>
+
+<p>
+  <strong>Wdl:</strong>
+  <%= @transaction.wdl %>
+</p>
+
+<%#= link_to 'Edit', edit_transaction_path(@transaction) %>
+<%= link_to 'back', transactions_path %>

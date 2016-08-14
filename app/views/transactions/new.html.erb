@@ -1,0 +1,36 @@
+<h3>New Transaction</h3>
+
+<p>
+*********************************************<br>
+Do not leave any field blank. If a value is 0, put in 0.0<br>
+*********************************************
+</p>
+
+<%= form_for :transaction, url: transactions_path do |f| %>
+  
+  <p>
+      <%= f.label :date %><br>
+      <%= f.text_field :date %>
+  </p>
+  
+  <p>
+      <%= f.label :bal %><br>
+      <%= f.text_field :bal %>
+  </p>
+  
+  <p>
+      <%= f.label :dep %><br>
+      <%= f.text_field :dep %>
+  </p>
+  
+  <p>
+      <%= f.label :wdl %><br>
+      <%= f.text_field :wdl %>
+  </p>
+  <br>
+  <p>
+      <%= f.submit %>
+  </p>
+<% end %>
+  
+<%= link_to 'back', transactions_path %>

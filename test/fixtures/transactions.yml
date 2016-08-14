@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  bal: 1.5
+  dep: 1.5
+  wdl: 1.5
+
+two:
+  date: MyString
+  bal: 1.5
+  dep: 1.5
+  wdl: 1.5

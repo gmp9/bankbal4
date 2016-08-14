@@ -1,0 +1,28 @@
+<h2>Listing transactions</h2>
+
+<%= link_to 'New Transaction', new_transaction_path %>
+<br>
+
+<table>
+  <tr>
+    <th>Date</th><br>
+    <th>Bal</th>
+    <th>Dep</th>
+    <th>Wdl</th>
+  </tr>
+  
+  
+  <% @transactions.each do |transaction| %>
+    <tr>
+        <td><%= transaction.date %></td>
+        <td><%= transaction.calc(transaction.bal,transaction.dep,transaction.wdl) %></td>
+        <td><%= transaction.dep %></td>
+        <td><%= transaction.wdl %></td>
+        <td><%#= link_to 'Updating', edit_transaction_path(transaction) %></td>
+        <td><%= link_to 'Delete', transaction_path(transaction),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+        </td>
+    </tr>
+  <% end %>
+</table>
