@@ -14,9 +14,12 @@
   
   <% @transactions.each do |transaction| %>
     <tr>
-        <td><%= transaction.date %></td>
+        <td><div class="highlight2"><%= transaction.date %></div></td>
+        
         <td><%= transaction.calc(transaction.bal,transaction.dep,transaction.wdl) %></td>
-        <td><%= transaction.dep %></td>
+        
+        <td><div class="highlight"><%= transaction.dep %></div></td>
+        
         <td><%= transaction.wdl %></td>
         <td><%#= link_to 'Updating', edit_transaction_path(transaction) %></td>
         <td><%= link_to 'Delete', transaction_path(transaction),
