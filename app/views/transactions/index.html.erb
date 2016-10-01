@@ -21,7 +21,6 @@
         <td><div class="highlight"><%= transaction.dep %></div></td>
         
         <td><%= transaction.wdl %></td>
-        <td><%#= link_to 'Updating', edit_transaction_path(transaction) %></td>
         <td><%= link_to 'Delete', transaction_path(transaction),
           method: :delete,
           data: { confirm: 'Are you sure?' } %>

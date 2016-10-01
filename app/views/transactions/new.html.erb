@@ -1,9 +1,7 @@
 <h3>New Transaction</h3>
 
 <p>
-*********************************************<br>
-Do not leave any field blank. If a value is 0, put in 0.0<br>
-*********************************************
+******Do not leave any field blank. If a value is 0, put in 0.0*******<br>
 </p>
 
 <%= form_for :transaction, url: transactions_path do |f| %>
@@ -27,6 +25,8 @@ Do not leave any field blank. If a value is 0, put in 0.0<br>
       <%= f.label :wdl %><br>
       <%= f.text_field :wdl %>
   </p>
+  
+  
   <br>
   <p>
       <%= f.submit %>

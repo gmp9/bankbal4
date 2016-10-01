@@ -22,7 +22,6 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(secure_params)
   
     if @transaction.save
-      
       redirect_to transaction_path(@transaction)
     else
        render 'new'

@@ -2,12 +2,14 @@
 
 one:
   date: MyString
-  bal: 1.5
-  dep: 1.5
-  wdl: 1.5
+  bal: 9.99
+  dep: 9.99
+  wdl: 9.99
+  scale: 
 
 two:
   date: MyString
-  bal: 1.5
-  dep: 1.5
-  wdl: 1.5
+  bal: 9.99
+  dep: 9.99
+  wdl: 9.99
+  scale: 
