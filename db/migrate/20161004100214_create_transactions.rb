@@ -4,7 +4,9 @@ class CreateTransactions < ActiveRecord::Migration
       t.string :date
       t.decimal :bal
       t.decimal :dep
-      t.decimal :wdl
+      t.decimal :wdl1
+      t.decimal :wdl2
+      t.decimal :wdl3
     end
   end
 end

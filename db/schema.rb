@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927095639) do
+ActiveRecord::Schema.define(version: 20161004100214) do
 
   create_table "transactions", force: :cascade do |t|
     t.string  "date"
     t.decimal "bal"
     t.decimal "dep"
-    t.decimal "wdl"
+    t.decimal "wdl1"
+    t.decimal "wdl2"
+    t.decimal "wdl3"
   end
 
   create_table "users", force: :cascade do |t|

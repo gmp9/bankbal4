@@ -1,20 +1,17 @@
 <h3>New Transaction</h3>
 
 <p>
-******Do not leave any field blank. If a value is 0, put in 0.0*******<br>
+*******Do not leave any field blank. If a value is 0, put in 0.0******<br>
 </p>
 
 <%= form_for :transaction, url: transactions_path do |f| %>
-  
+ 
+ <br> 
   <p>
       <%= f.label :date %><br>
       <%= f.text_field :date %>
   </p>
   
-  <p>
-      <%= f.label :bal %><br>
-      <%= f.text_field :bal %>
-  </p>
   
   <p>
       <%= f.label :dep %><br>
@@ -23,8 +20,16 @@
   
   <p>
       <%= f.label :wdl %><br>
-      <%= f.text_field :wdl %>
+      <input name="transaction[wdl1]" type="decimal"/>
+      <input name="transaction[wdl2]" type="decimal"/>
+      <input name="transaction[wdl3]" type="decimal"/>
   </p>
+  
+  <p>
+      <%= f.label :bal %><br>
+      <%= f.text_field :bal %>
+  </p>
+  
   
   
   <br>

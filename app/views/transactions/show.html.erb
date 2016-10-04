@@ -3,10 +3,6 @@
   <%= @transaction.date %>
 </p>
 
-<p>
-  <strong>Bal:</strong>
-  <%= @transaction.calc(@transaction.bal,@transaction.dep,@transaction.wdl) %>
-</p>
 
 <p>
   <strong>Dep:</strong>
@@ -15,8 +11,14 @@
 
 <p>
   <strong>Wdl:</strong>
-  <%= @transaction.wdl %>
+  <%= @transaction.sumwdl(@transaction.wdl1,@transaction.wdl2,@transaction.wdl3) %>
 </p>
+
+<p>
+  <strong>Bal:</strong>
+  <%= @transaction.calc(@transaction.bal,@transaction.dep,@transaction.sumwdl(@transaction.wdl1,@transaction.wdl2,@transaction.wdl3)) %>
+</p>
+
 
 <%#= link_to 'Edit', edit_transaction_path(@transaction) %>
 <%= link_to 'back', transactions_path %>

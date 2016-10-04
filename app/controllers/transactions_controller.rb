@@ -59,7 +59,7 @@ class TransactionsController < ApplicationController
   end
   
   def secure_params
-    params.require(:transaction).permit(:date, :bal, :dep, :wdl)
+    params.require(:transaction).permit(:date, :bal, :dep, :wdl1, :wdl2, :wdl3)
   end
   
   
