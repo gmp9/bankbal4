@@ -20,6 +20,7 @@ This application requires:
 
 - Ruby 2.3.1
 - Rails 4.2.5
+- See the Gemfile
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
