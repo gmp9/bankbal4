@@ -11,13 +11,12 @@
 
 <p>
   <strong>Wdl:</strong>
-  <% sumW = @transaction.sumwdl(@transaction.wdl1,@transaction.wdl2,@transaction.wdl3) %>
-  <%= sumW %>
+  <%= @transaction.sumwdl(@transaction.wdl1,@transaction.wdl2,@transaction.wdl3) %>
 </p>
 
 <p>
   <strong>Bal:</strong>
-  <%= @transaction.calc(@transaction.bal,@transaction.dep,sumW) %>
+  <%= @transaction.calc(@transaction.bal,@transaction.dep,@transaction.sumwdl(@transaction.wdl1,@transaction.wdl2,@transaction.wdl3)) %>
 </p>
 
 
