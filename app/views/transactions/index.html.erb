@@ -6,6 +6,7 @@
 <table>
   <tr>
     <th>Date</th><br>
+    <th>wdl1</th>
     <th>Dep</th>
     <th>Wdl</th>
     <th>Bal</th><br>
@@ -16,12 +17,17 @@
     <tr>
         <td><%= transaction.date %></td>
         
+        <td><%= transaction.wdl1 %></td>
+        
         <td><div class="highlight"><%= transaction.dep %></div></td>
         
-        <td><%= transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3) %></td>
-        
-         <td><div class="highlight2"><%= transaction.calc(transaction.bal,transaction.dep,transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3)) %></div></td>
-        
+         <td><%= 20.00 %></td>
+        <td><%#= transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3) %></td>
+       
+         <td><%=1200.00 %></td>
+         <td><div class="highlight2"><%#= transaction.calc(transaction.bal,transaction.dep,transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3)) %></div></td>
+         
+         
         <td><%= link_to 'Delete', transaction_path(transaction),
           method: :delete,
           data: { confirm: 'Are you sure?' } %>
