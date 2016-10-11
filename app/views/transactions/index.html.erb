@@ -27,9 +27,11 @@
         
         <td><div class="highlight"><%= transaction.dep %></div></td>
         
-        <td><%= transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3) %></td>
+        <% sumW = transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3) %>
+        
+        <td><%= sumW %></td>
        
-         <td><div class="highlight2"><%= transaction.calc(transaction.bal,transaction.dep,transaction.sumwdl(transaction.wdl1,transaction.wdl2,transaction.wdl3)) %></div></td>
+         <td><div class="highlight2"><%= transaction.calc(transaction.bal,transaction.dep,sumW) %></div></td>
          
         <td><%= link_to 'Delete', transaction_path(transaction),
           method: :delete,
